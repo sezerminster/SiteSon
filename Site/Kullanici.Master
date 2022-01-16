@@ -1,0 +1,369 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Kullanici.master.cs" Inherits="Site.Kullanici" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder  ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        
+
+#yanMenu {padding:0px; }
+
+#yanMenu ul {
+margin:0px;
+padding:0px;
+list-style:none; }
+
+#yanMenu li {
+float:left; /* li etiketlerinin yan yana yerleşmesini sağlıyoruz */
+position:relative; /* İçteki ul'lerin buraya bağlı konumlandırılmasını sağlıyoruz */
+width:197px;  }
+
+#yanMenu li ul {
+display:none; /* içteki listelerin başlangıçta görünmemesini sağlıyoruz */
+position:absolute; /* Konumu ayarlayabilmek için */
+left:0px; /* soldan uzaklığı kendi menümüze göre ayarlıyoruz*/
+top:29px; } /* üstten uzaklığı kendi menümüze göre ayarlıyoruz */
+
+#yanMenu ul li a {
+background-color:pink;
+border:1px solid red;
+color:red;
+font-weight:bold;
+display:block;
+margin:0px;
+padding:2px;
+text-decoration:none;
+line-height:24px;
+text-align:center; }
+
+#yanMenu ul li a:hover {
+background-color:white;
+color:gray;}
+
+#yanMenu li:hover ul {
+display:block;} /* üzerine gelinen li içindeki ul'yi görünür hale getiriyoruz. */ 
+
+
+        .auto-style1 {
+            height: 215px;
+            width: 988px;
+            margin-left:279px;
+            margin-top:-30px;
+            background-color: #FFFFFF;
+        }
+         .auto-style3 {
+            width: 820px;
+            height: 31px;
+            background-color: white;
+            margin-left:450px;
+
+        }
+        .auto-style4 {
+            width: 688px;
+            height: auto;
+            background-color: #FFFFCC;
+
+          
+            float:left;
+            text-align: center;
+            text-decoration: underline;
+            margin-left: 3px;
+        }
+        .auto-style5 {
+            width: 287px;
+            height: auto;
+            background-color: #99CCFF;
+            margin-left: 711px;
+         
+        }
+        .auto-style7 {
+            text-align: center;
+            height:auto;
+        }
+         .auto-style8 {
+         
+            margin-left:279px;
+            width:995px;
+            height:auto;
+        }
+                
+        .menu {
+            text-align: center;
+            background-color: #FFFFFF;
+        }
+        .menu a{
+			text-decoration:none;
+			display:inline-block;
+			width:150px;
+			color:black;
+			font-weight:bold;
+			margin:5px;
+			text-align:center;
+		
+		}
+		.menu a:hover{
+			color:red;
+			border-bottom:5px solid black;
+		}
+        
+        .auto-style12 {
+            width: 1px;
+            height: 20px;
+            background-color: #FFFFFF;
+            margin-left: 281px;
+            opacity:0.0;
+        }
+        
+        .auto-style13 {
+            margin-left: 0px;
+            margin-top: 0px;
+        }
+        
+        .auto-style14 {
+            width: 100%;
+        }
+        
+        .auto-style15 {
+            text-decoration: underline;
+            font-size: large;
+            color:red;
+        }
+        .auto-style16 {
+            left: -165px;
+            top: -1px;
+            height: 29px;
+            width: 206px;
+        }
+        .auto-style17 {
+            height: 32px;
+            width: 985px;
+
+        }
+        .auto-style18 {
+            height: 25px;
+            margin-left: 0px;
+        }
+      
+        .auto-style19 {
+            left: -172px;
+            top: 0px;
+            width: 98px;
+        }
+        .auto-style20 {
+            left: -170px;
+            top: 0px;
+            width: 179px;
+        }
+        .auto-style21 {
+            left: -169px;
+            top: 0px;
+            width: 199px;
+        }
+      
+        .auto-style22 {
+            left: -167px;
+            top: 0px;
+            width: 198px;
+        }
+    
+        
+        .auto-style26 {
+            width: 1229px;
+            height: 20px;
+           
+            margin-left: 100px;
+            background-color:white;
+    opacity:0.0;
+        }
+        .auto-style25 {
+            
+            margin-left: 279px;
+
+        }
+                
+
+        
+        .auto-style23 {
+            margin-left: 18px;
+            width:55px;
+            height:33px;
+        }
+
+        .auto-stylee{
+            margin-top:20px;
+         
+            
+        }
+       
+
+        body {
+            background-image:url("resimler/arkaplan.jpg")
+        }
+
+        @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+
+
+
+
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+
+
+        .auto-style27 {
+            height: 26px;
+        }
+        .auto-style28 {
+            font-size: medium;
+        }
+
+
+
+        </style>
+
+
+</head>
+<body style="width: 1332px; margin-left: 0px; margin-top: 5px;">
+    
+    <form id="form1" runat="server">
+        <div class="auto-style1">
+          
+       &nbsp;<asp:Image ID="Image1" runat="server" Height="205px" ImageUrl="~/resimler/onplan.png" Width="987px" CssClass="auto-style13" />
+          
+        </div>
+
+
+        <div style="margin-top:20px;">
+
+        </div>
+        
+
+     
+
+
+        <div >
+
+        </div>
+
+     
+         <div class="auto-styleee">
+             
+              <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style25" Width="246px" Height="30"></asp:TextBox>
+&nbsp;<asp:Button ID="Button1" runat="server" Text="Ara" OnClick="Button1_Click"  CssClass="button2 "  Width="61px" Height="40px" style="margin-left: 0px"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
+     
+   
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="girisyap.aspx"><asp:Button ID="Button2" runat="server" Text="Giriş Yap" OnClick="Button2_Click" CssClass="auto-style23 button2 " Width="83px" Height="40px"  style="margin-left: 180px" /></a><a href="uyeol.aspx"><asp:Button ID="Button3" runat="server" Text="Üye Ol" OnClick="Button3_Click" CssClass="button2 " Width="78px" Height="40px"/></a>&nbsp;
+
+          
+     
+
+             <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Çıkış Yap" style="margin-left:265px;" Width="76px" Height="40px" />
+
+          
+     
+
+             </div>
+
+        <div>
+        </div>
+
+
+
+       
+  
+                 
+
+
+
+
+
+
+
+        <div  class="auto-style26">
+          
+        </div>
+        <div  class="auto-style3">
+          <div id="yanMenu">
+              
+<ul class="auto-style17">
+<li class="auto-style19"><a href="Anasayfa.aspx">Ana Sayfa</a></li>
+<li class="auto-style20"><a href="Ozetver.aspx">Özet Ver</a>
+
+
+
+</li>
+
+<li class="auto-style21"><a href="Özetler.aspx">Özetler</a></li>
+
+
+
+
+
+<li class="auto-style22" ><a href="Hakkımızda.aspx">Hakkımızda</a></li>
+    <li class="auto-style16"><a href="İletisim.aspx" class="auto-style18">İletişim</a></li>
+
+<div style="clear:both"></div>  <!-- Yan yana yerleşen son elemandan sonra float özelliğinin etkisini kaldırıyoruz. -->
+
+</ul>
+
+</div>
+          
+        </div>
+         <div  class="auto-style12">
+          
+        </div>
+
+        <div class="auto-style8" >
+            <div  class="auto-style4"> 
+                
+             <div class="auto-style7">
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+             </div>
+           
+            </div>
+          <div  class="auto-style5">
+              <span class="auto-style15"><strong><em>DÜNYA EDEBİYATLARI</em></strong></span><strong><em>
+                  <div class="auto-style7">
+             </div>
+              <asp:DataList ID="DataList1" runat="server" Width="285px">
+                  <ItemTemplate>
+                      <table class="auto-style14" style="border: thick outset #C0C0C0; text-decoration: underline;">
+                          <tr>
+                              <td class="auto-style27">
+                                 <a href="kategoridetay.aspx?KategoriID=<%#Eval("KategoriID") %> "><asp:Label ID="Label1" runat="server" Text='<%# Eval("KategoriAdı") %>' CssClass="auto-style28"></asp:Label></a>
+                              </td>
+                          </tr>
+                      </table>
+                  </ItemTemplate>
+                
+              </asp:DataList>
+             </em></strong>
+              </div>
+
+
+
+            <div style="">
+     </div>
+            
+       </div>     
+    </form>
+</body>
+</html>

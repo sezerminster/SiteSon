@@ -1,0 +1,196 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Site.Admin" %>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder  ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        
+
+#yanMenu {padding:0px; }
+
+#yanMenu ul {
+margin:0px;
+padding:0px;
+list-style:none; }
+
+#yanMenu li {
+float:left; /* li etiketlerinin yan yana yerleşmesini sağlıyoruz */
+position:relative; /* İçteki ul'lerin buraya bağlı konumlandırılmasını sağlıyoruz */
+width:197px;  }
+
+#yanMenu li ul {
+display:none; /* içteki listelerin başlangıçta görünmemesini sağlıyoruz */
+position:absolute; /* Konumu ayarlayabilmek için */
+left:0px; /* soldan uzaklığı kendi menümüze göre ayarlıyoruz*/
+top:29px; } /* üstten uzaklığı kendi menümüze göre ayarlıyoruz */
+
+#yanMenu ul li a {
+background-color:pink;
+border:1px solid red;
+color:red;
+font-weight:bold;
+display:block;
+margin:0px;
+padding:2px;
+text-decoration:none;
+line-height:24px;
+text-align:center; }
+
+#yanMenu ul li a:hover {
+background-color:white;
+color:gray;}
+
+#yanMenu li:hover ul {
+display:block;} /* üzerine gelinen li içindeki ul'yi görünür hale getiriyoruz. */ 
+
+
+        .auto-style1 {
+            height: 215px;
+            width: 992px;
+            margin-left:279px;
+            background-color: #FFFFFF;
+        }
+         .auto-style4 {
+            width: 635px;
+            height: auto;
+            background-color: #99CCFF;
+          
+            float:left;
+            text-align: center;
+            text-decoration: underline;
+            margin-left: 3px;
+        }
+        .auto-style5 {
+            width: 287px;
+            height: auto;
+            background-color: #99CCFF;
+            margin-left: 711px;
+         
+        }
+        .auto-style7 {
+            text-align: center;
+            height:auto;
+            
+        }
+         .auto-style8 {
+         
+            margin-left:279px;
+            width:995px;
+            height:auto;
+        }
+                
+        .menu {
+            text-align: center;
+            background-color: #FFFFFF;
+        }
+        .menu a{
+			text-decoration:none;
+			display:inline-block;
+			width:150px;
+			color:black;
+			font-weight:bold;
+			margin:5px;
+			text-align:center;
+		
+		}
+		.menu a:hover{
+			color:red;
+			border-bottom:5px solid black;
+		}
+        
+        .auto-style12 {
+            width: 441px;
+            height: 20px;
+            background-color: #FFFFFF;
+            margin-left: 100px;
+        }
+        
+        .auto-style13 {
+            margin-left: 0px;
+            
+        }
+        
+        .auto-style14 {
+            width: 100%;
+        }
+        
+        .auto-style15 {
+            text-align: center;
+            text-decoration: underline;
+            font-size: large;
+        }
+      
+        .auto-style16 {
+            text-align: left;
+        }
+      
+        .auto-style17 {
+            color: #FF0000;
+            font-size: x-large;
+        }
+      
+        </style>
+</head>
+<body style="width: 1332px; margin-left: 0px; margin-top: 5px;">
+    
+    <form id="form1" runat="server">
+        <div class="auto-style1">
+          
+        &nbsp;<asp:Image ID="Image1" runat="server" Height="216px" ImageUrl="~/resimler/images.jpg" Width="987px" CssClass="auto-style13" />
+          
+        </div>
+         <div  class="auto-style12">
+          
+        </div>
+
+        <div class="auto-style8" >
+            <div  class="auto-style4"> 
+                
+             <div class="auto-style7">
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1"  runat ="server">
+            </asp:ContentPlaceHolder>
+             </div>
+           
+            </div>
+          <div  class="auto-style5">
+              <strong><em> &nbsp;<div class="auto-style15">
+                  <span class="auto-style17" style="border: thin groove #FF0000">İŞLEMLER</span><br />
+                  <br />
+                  <table class="auto-style14">
+                      <tr>
+                        <td class="auto-style16" style="border-style: inset inset groove groove; border-width: thin 10px 20px thin; border-top-color: #000000; border-right-color: #000000;">  <a href="adminkategori.aspx">KATEGORİLER</a></td>
+                      </tr>
+                      <tr>
+                         <td class="auto-style16" style="border-style: inset inset groove groove; border-width: thin 10px 20px thin; border-top-color: #000000; border-right-color: #000000;"> <a href="Adminkitap.aspx">KİTAPLAR</a></td>
+                      </tr>
+                      <tr>
+                        <td class="auto-style16" style="border-style: inset inset groove groove; border-width: thin 10px 20px thin; border-top-color: #000000; border-right-color: #000000;"> <a href="AdminYorumlar.aspx"> YORUMLAR</a></td>
+                      </tr>
+                      <tr>
+                       <td class="auto-style16" style="border-style: inset inset groove groove; border-width: thin 10px 20px thin; border-top-color: #000000; border-right-color: #000000;"> <a href="Adminmesaj.aspx">MESAJLAR</a> </td>
+                      </tr>
+                      <tr>
+                          <td class="auto-style16" style="border-style: inset inset groove groove; border-width: thin 10px 20px thin; border-top-color: #000000; border-right-color: #000000;"><a href="önerAdmin.aspx">ÖNERİLER</a></td>
+                      </tr>
+                      <tr>
+                       <td class="auto-style16" style="border-style: inset inset groove groove; border-width: thin 10px 20px thin; border-top-color: #000000; border-right-color: #000000;"> <a  href="AdminHakkımızda.aspx">HAKKIMIZDA</a> </td>
+                      </tr>
+                  </table>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+             </div>
+             </em></strong>
+            </div>
+            </div>
+    </form>
+</body>
+</html>
